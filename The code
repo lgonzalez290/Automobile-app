@@ -1,0 +1,137 @@
+playing=True
+zero1=0
+cost=50
+tax=cost*.07 
+total=tax+cost
+reason=None
+
+print(total)
+print("""     
+        -------Lucas's Repair Shop-------""")
+print( """Hello welcome to my autorepiar shop we fix cars""")
+name=input("""
+    Thank you for chosing us what is you name? :""")
+cartype=input("""
+    What is you car model? :""")
+mileage=input("""
+    Finally what is your mileage on your velchie? :""")
+print("Just to comfirm your name is",name,"your car model is",cartype,"and you milages is",mileage,"")
+
+while playing:
+    listing=input("""
+    What brings you into the shop today?
+    
+    1.Oil change and tire roation 
+    
+    2.Brake pads and front end alignment 120 for package
+    
+    3.Broken glass repiar Small(40.00) Large(70.00)             
+    
+    4.Dent removoal Small(5.00) Large(15.00) : """)
+    
+    if listing == "1":
+        print("""So you orderd the oil change and trie rotaion package this inculdes 
+    New oil or filer 80.00
+    New standard tires 30.00
+    New 4wd or truck tires 45.00""")
+        choice1=input("""New oil or new filter 
+    1.New oil 
+    2.New filter :""")
+        if choice1 == "1":
+            print(" new oil for 80 dollars")
+        if choice1 == "2":
+            print("New filter for 80 dollars")
+        cost+=80
+        tires=input("""
+    What tires would you like to buy 
+    1. Standard                  
+    2. 4wd
+    3.Truck tires :""")
+        if tires =="1":
+            cost+=30
+            print("""
+    Thank you that will cost you dollars""")
+        if tires == "2"or "3":
+            cost+45
+            print("""
+    Thank you that will cost 45 dollars""")
+            
+        finaltires=input("""
+    Will that be all? :""")
+        if finaltires == "No" or "no":
+            print("Contuine broswing our app")
+            continue
+            
+        if finaltires == "Yes" or "yes":
+            print("Your total will be",total,"dollars")
+            playing=False
+            exit()
+
+    if listing =="2":
+        print("""
+    The break package will cost you 120 dollars this will fix all problems inculding brakes and front and end alignment.""")
+        cost+=120
+        finalbrakes=input("Will that be all? :")
+        if finalbrakes == "No" or "no":
+            print("""
+    Contunine broswing""")
+            continue
+            
+        if finalbrakes == "Yes" or "yes" :
+            print("Your total will be", total ,"dollars")
+            playing=False
+            exit()
+    if listing == "3":
+        print("""
+    The broken glass package""")
+        glassdamage=input("""How big is the the damage to your glass:
+    1.Large(70.00) 
+    2.Small(40.00) :""")
+        if glassdamage == "1":
+            cost+=70
+            print("""
+    Large ohh thats terriable but we will be happy to fix that for you. Large glass damage will cost you 70 dolars. """)
+        if glassdamage == "2":
+            cost+=40
+            print("""
+    Small amount damage will be no problem for us. Small glass damage will coat you """)
+        finalglass=input("""
+    Will that be all? :""")
+        if finalglass == "No" or "no":
+            print("""
+    Contunie broswing our app""")
+            
+        if finalglass == "Yes" or "yes":
+            print("Your total will be",total,"dollars")
+            playing=False
+            exit()
+    if listing =="4":
+        print("Dent removal")
+        dentdamage=input("""How big is the dent 
+    1.Small(5.00)
+    2.Large(15.00)""")
+        if dentdamage == "1":
+            cost+=5
+            print("""
+    That wont be a problem for us we can handle all sizes of any problems with your vechile.""")
+        if dentdamage == "2":
+            cost+=15
+            print("""
+    Sorry to hear that i bet somone hit you didn't they well it fine because we can deal with any problem regarding your vechile.""")
+        finaldent=input("""
+    Will that be all? :""")
+        if finaldent == "Yes" or "yes":
+            print("Your total will be", total,"dollars")
+            playing=False
+            exit()
+        
+        if finaldent == "No" or "no":
+            print("Contuine browsing our app")
+            continue
+    
+    else:
+        print("""
+    Please chose one of the provided options""")    
+        
+        
+        
